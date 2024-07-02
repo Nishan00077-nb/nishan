@@ -1,0 +1,40 @@
+/* Reset default margin and padding for the whole page */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the navigation bar */
+nav {
+    background-color: #333; /* Dark background color */
+}
+
+/* Style for the navigation links */
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    text-align: center; /* Center-align the links */
+}
+
+nav ul li {
+    display: inline-block; /* Display items in a line */
+    margin: 0 10px; /* Add margin between list items */
+    position: relative; /* Position relative for absolute positioning of the line */
+}
+
+nav ul li a {
+    display: inline-block; /* Make links behave like block elements */
+    padding: 10px 20px; /* Padding around the links */
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Text color */
+    position: relative; /* Ensure the link is positioned relative */
+}
+
+nav ul li a:hover::after {
+    content: ''; /* Empty content */
+    position: absolute; /* Position the line absolutely */
+    left: 0; /* Align to the left edge of the link */
+    right: 0; /* Align to the right edge of the link */
+    bottom: -2px; /* Position 2 pixels above the bottom edge of the link */
+    background-color: #fff; /* Color of the line */
+    height: 2px; /* Height of the line */
+}
